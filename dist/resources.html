@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Washington J. Sanchez &amp; Associates, LLC | resources</title>
+  
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+    <!--HEADER-->
+    <nav>
+        <a href="#"><img src="http://jscpagrowth.com/assets/white-logo.svg"></a>
+        <div id="menu-btn-wrapper">
+            <div id="menu-btn" onclick="toggle()">
+                <div class="animate-btn"></div>
+                <div class="animate-btn"></div>
+            </div>
+        </div>
+
+        <span id="desktop-menu">
+            <a id="nav-home" href="/home">HOME</a>
+            <a id="nav-services" href="/services">SERVICES</a>
+            <a id="nav-payroll" href="/payroll">PAYROLL</a>
+            <a id="nav-resources" href="/resources">RESOURCES</a>
+            <a id="nav-about" href="/about_us">ABOUT</a>
+            <a id="nav-contact" href="/contact_us">CONTACT</a>
+        </span>
+        <div id="mobile-menu" >
+            <ul>
+              <li><a href="/home">Home</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/payroll">Payroll</a></li>
+              <li><a href="/resources">Resources</a></li>
+              <li><a href="/about_us">About</a></li>
+              <li><a href="/contact_us">Contact</a></li>        
+            </ul>
+        </div>
+    </nav>
+
+    <!--CONTENT-->
+    <div class="header-img" style="background: url('http://jscpagrowth.com/assets/resources-image.jpeg') no-repeat top;background-size:cover">
+        <div class="overlay"></div>
+        <div class="page-info-tag"><span>Resources</span></div>
+    </div>
+    <div class="content-box">
+      <div class="row forms" >
+            <h2 class="subheader">IRS Forms</h2>
+            <div class="column-4" style="text-align: center;">
+                <div>
+                    <a href="https://www.irs.gov/pub/irs-pdf/fw7.pdf" target="_blank"><img src="http://jscpagrowth.com/assets/w7logo.png"></a>
+                    <a href="https://www.irs.gov/pub/irs-pdf/fw7.pdf" target="_blank">Form W-7</a>
+                    <p>The W-7 form is used to apply for an Individual Taxpayer Identification Number(ITIN).</p>
+                </div>
+            </div>
+            <div class="column-4" style="text-align: center;">
+                <div id="middle">
+                    <a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3" target="_blank"><img src="http://jscpagrowth.com/assets/w9logo.png"></a>
+                    <a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3" target="_blank">Form W-9</a>
+                    <p>Use this form to obtain your Taxpayer Identification Number(TIN).</p>
+                </div>
+            </div>
+            <div class="column-4" style="text-align: center;">
+                <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf?portlet=3" target="_blank"><img src="http://jscpagrowth.com/assets/w4logo.png"></a>
+                <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf?portlet=3" target="_blank">Form W-4</a>
+                <p>Complete this form so that your employer can withhold the correct federal income tax from your pay.</p>
+            </div>
+        </div>
+        <div class="row forms" id="form-bottom-row">
+            <div class="column-4" style="text-align: center;">
+                <div>
+                    <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf?portlet=3" target="_blank"><img src="http://jscpagrowth.com/assets/ss4logo.png"></a>
+                    <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf?portlet=3" target="_blank">Application for EIN</a>
+                    <p>Use Form SS-4 to apply for an employer identification number(EIN).</p>
+                </div>
+            </div>
+            <div class="column-4" style="text-align: center;">
+                <div id="middle">
+                    <a href="https://www.irs.gov/pub/irs-pdf/f9465.pdf" target="_blank"><img src="http://jscpagrowth.com/assets/9465logo.png"></a>
+                    <a href="https://www.irs.gov/pub/irs-pdf/f9465.pdf" target="_blank">Installment Agreement Request</a>
+                    <p>Use this form to request a monthly installment plan if you cannot pay the full amount you owe shown on your tax return.</p>
+                </div>
+            </div>
+            <div class="column-4" style="text-align: center;">
+                <a href="https://www.irs.gov/pub/irs-pdf/f2848.pdf" target="_blank"><img src="http://jscpagrowth.com/assets/2484logo.png"></a>
+                <a href="https://www.irs.gov/pub/irs-pdf/f2848.pdf" target="_blank">Power of Attorney Form</a>
+                <p>Use this form to authorize an individual to represent you before the IRS.</p>
+            </div>
+        </div>
+
+        <!--calculator-->
+        <h2 class="subheader">Mortgage Calculator</h2>
+        <div class="calculator">
+            
+            <p>Mortgage Amount</p>
+            <input type="text" id="mortgage-amount" >
+            <p>Interest Rate(%)</p>
+            <input type="text" id="interest-rate" placeholder="(E.g.   3.92)">
+            <p>Mortgage Period(in years)</p>
+            <input type="text" id="mortgage-period"><br>
+            <button id="enter" onclick="enterMortgageInfo()">Enter</button>
+            <button id="reset" onclick="resetCalculator()">Reset</button><br><br>
+            <p>Total Cost of Mortgage: <span id="total-mortgage"></span></p>
+            <p>Monthly Payment: <span id="monthly-payment"></span></p>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="row">
+            <div class="column-4" id="navigation">
+                <p class="header">Navigation</p>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/payroll">Payroll</a></li>
+                    <li><a href="/forms">Forms</a></li>
+                    <li><a href="/about_us">About</a></li>
+                    <li><a href="/contact_us">Contact</a></li>
+                </ul>
+            </div>
+            <div class="column-4">
+                <div id="footer-contact" >
+                <p class="header">Contact Us</p>
+                <p><strong>Address:</strong>79 Dayton Street, Suite 1, Elizabeth NJ 07202</p>
+                <p><strong>Tel:</strong>(908)469-6874</p>
+                <p><strong>Fax:</strong>(908)248-9393</p>
+                <p><strong>Email:</strong><a href="mailto:contact@jscpagrowth.com">contact@jscpagrowth.com</a></p>
+                </div>
+            </div>
+            <div class="column-4">
+                <p id="copyright">&copy; 2013 Washington J. Sanchez &amp; Associates, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>
