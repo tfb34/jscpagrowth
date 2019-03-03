@@ -51,7 +51,6 @@ window.addEventListener('resize', function(e){
 
 
 function desktopNavbar(){
-    console.log("desktop");
     let navbar = document.getElementsByTagName('nav')[0];/**/
     navbar.style.backgroundColor="rgba(0,0,0,0.7)";
 }
