@@ -174,6 +174,6 @@ function formatNum(x){
 }
 
 
-
-
-
+window.toggle= toggle;
+window.enterMortgageInfo = enterMortgageInfo;
+window.resetCalculator = resetCalculator;
