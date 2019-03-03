@@ -1,6 +1,14 @@
 import './custom.css';
 /*import _ from 'flexboxgrid';*/
 
+window.onload = function(){
+    console.log("hello")
+    setInterval(function(){loadPage();}, 1000);
+}
+function loadPage(){
+    document.getElementsByTagName("body")[0].style.display = "block";
+}
+
 let initialNavColor;
 
 document.addEventListener("readystatechange", function(){

@@ -1,4 +1,4 @@
-
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');*/
 
 :root{
     --main-color: teal;
@@ -255,7 +255,7 @@ nav:after {
 #service-pic{
 	margin: 0 auto;
 	display: block;
-	height:90px;
+	height:45px;
 }
 .service-header{
 	font-size:20px;
@@ -263,6 +263,8 @@ nav:after {
 }
 .service-description{
 	font-size:18px;
+    max-width: 280px;
+    margin: 0 auto;
 }
 .service-header, .service-description{
 	color: var(--header-color);
@@ -281,6 +283,9 @@ nav:after {
 	display: block;
 	width: 6.2em;
 	margin: 5em auto 5em auto;
+}
+#services .row{
+    max-width: 2000px;
 }
 #services .column-4{
 	padding-bottom:4em;
@@ -476,7 +481,7 @@ footer{
     width: 0;
     height:90vh;
 	font-weight:bold;
-	font-size:21px;
+	font-size:16px;
 	background-color:white;
     position:absolute;
     z-index: 2;
@@ -497,6 +502,7 @@ footer{
 }
 .service-box-wrapper h3{
 	display:table-cell;vertical-align:middle;
+    
 }
 #accounting-services ul{
 	list-style-type: circle;
@@ -705,7 +711,8 @@ span#contact-btn:hover{
 }
 .description{
     font-size:16px;text-align:center;line-height:1.8em;color:#717171;
-    min-width:50px;max-width:700px;margin:0 auto;padding:0.5em 0.8em 6em 0.8em;
+    min-width:50px;max-width:580px;margin:0 auto;padding:0.5em 0.8em 6em 0.8em;
+    margin-top:1em;
 }
 .content-box-no-padding{
 	background:white;
@@ -756,7 +763,7 @@ form h3{
     padding-bottom:3em;
 }
 .payroll-icons img{
-    width:80px;
+    width:45px;
 }
 .payroll-icons div{
     text-align: center;
@@ -831,8 +838,10 @@ article{
     margin-bottom:4em;
     text-align:center;
 }
-
-@media only screen and (max-width: 650px){/*550px*/
+#all-services li{
+    font-size: 16px;
+}
+@media only screen and (max-width: 1000px){/*550px*/
     .column-1,
     .column-2,
     .column-3,
@@ -904,25 +913,6 @@ article{
     .row.services{
     display: -ms-flex; display: -webkit-flex; display:flex;
     }
-    .service-box-wrapper{
-        padding:0 2em;
-    }
-    .communication-row-wrapper{
-        margin-top: 5em;margin-bottom: 5em;/*desktop: margin-top,margin-bottom: 3em*/
-    }
-    .inner-wrapper.first{
-        padding-bottom: 0;
-        border-right:1px solid grey;
-    }
-    .inner-wrapper.last{
-        padding-top: 0;
-    }
-    .inner-wrapper a{
-        pointer-events: none;/*msg and call for desktop*/
-    }
-    .inner-wrapper.first a{
-        pointer-events: auto;
-    }
     .logo-style #header{
         font-size: 40px;
     }
@@ -941,6 +931,7 @@ article{
 
 }
 @media only screen and (min-width:700px){
+
     #home-main-image{
         height:800px;
     }
@@ -975,7 +966,7 @@ article{
         height:400px;
     }
     .description{
-        font-size:20px;
+        font-size:18px;
     }
     form{
         max-width:700px;
@@ -991,6 +982,25 @@ article{
 
 /*larger screens (e.g. desktop)*/
 @media only screen and (min-width: 1024px){
+    .service-box-wrapper{
+        padding:0 2em;
+    }
+    .communication-row-wrapper{
+        margin-top: 5em;margin-bottom: 5em;/*desktop: margin-top,margin-bottom: 3em*/
+    }
+    .inner-wrapper.first{
+        padding-bottom: 0;
+        border-right:1px solid grey;
+    }
+    .inner-wrapper.last{
+        padding-top: 0;
+    }
+    .inner-wrapper a{
+        pointer-events: none;/*msg and call for desktop*/
+    }
+    .inner-wrapper.first a{
+        pointer-events: auto;
+    }
     
     #home-main-image h1{
         padding-top:15%;
@@ -1002,11 +1012,11 @@ article{
         margin-top:6%;
     }
     #footer-contact p{
-        font-size:18px;
+        font-size:16px;
         color:grey;
     }
-    .header{
-        font-size:24px !important;
+    footer .header{
+        font-size:20px !important;
     }
     #navigation{
         font-size:18px;
@@ -1016,7 +1026,7 @@ article{
         color:white;
     }
     #copyright{
-        font-size: 18px;
+        font-size: 14px;
     }
 	#menu-btn{
 		display:none;
@@ -1099,6 +1109,7 @@ article{
 	}
 	footer a{
 		color: var(--main-color);
+        font-size: 16px;
 	}
 	#copyright{
 		color: grey;
@@ -1164,9 +1175,6 @@ article{
     .overlay{
         height:510px;
     }
-    .description{
-        font-size:22px;
-    }
     .content-box-no-padding{
     	min-width:0;max-width:1080px;padding-left:0;padding-right:0;margin:0 auto;
     }
@@ -1188,6 +1196,9 @@ article{
         line-height:1.5em;
         font-size:15px;
     }  
+    #services .row{
+        margin:0 auto;
+    }
 }
 
 @media only screen and (min-width: 2560px){
