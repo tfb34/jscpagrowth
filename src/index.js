@@ -3,7 +3,7 @@ import './custom.css';
 
 let initialNavColor;
 
-document.addEventListener("readystatechange", function(){
+/*document.addEventListener("readystatechange", function(){
     let title = document.getElementsByTagName("title")[0].innerHTML;
     let currentPage;
     document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
@@ -30,7 +30,7 @@ document.addEventListener("readystatechange", function(){
     document.getElementsByTagName('nav')[0].style.backgroundColor = initialNavColor;
     document.getElementById(currentPage).className = "selected";
 })
-
+*/
 
 function setWhiteBackground(){
     document.getElementsByTagName('body')[0].style.backgroundColor = "white";
