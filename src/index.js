@@ -1,5 +1,4 @@
 import './custom.css';
-/*import _ from 'flexboxgrid';*/
 
 window.onload = function(){
     setInterval(function(){loadPage();}, 1000);
@@ -8,25 +7,18 @@ function loadPage(){
     document.getElementsByTagName("body")[0].style.display = "block";
 }
 
+let title = document.getElementsByTagName("title")[0].innerHTML;
+let bool = title.includes("home");
 
-
-let x = window.matchMedia("(max-width: 1024px)");
-setNavbar(x);
-
-window.addEventListener('resize', function(e){
-    setNavbar(x);
-});
-
-
-function setNavbar(x){
-    mobileNavbar();
+if(bool){
+    setNavbar();
 }
 
-
-function mobileNavbar(){
+function setNavbar(){
     window.addEventListener('scroll', function(e){
        
-        let navbar = document.getElementsByTagName('nav')[0];
+       /* let navbar = document.getElementsByTagName('nav')[0];*/
+        let navbar = document.getElementById("home-nav");
         if(window.scrollY >10){
             navbar.style.backgroundColor="rgba(0,0,0,0.7)";
         }else{
