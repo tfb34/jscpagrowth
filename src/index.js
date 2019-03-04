@@ -2,55 +2,15 @@ import './custom.css';
 /*import _ from 'flexboxgrid';*/
 
 window.onload = function(){
-    console.log("hello")
     setInterval(function(){loadPage();}, 1000);
 }
 function loadPage(){
     document.getElementsByTagName("body")[0].style.display = "block";
 }
 
-let initialNavColor;
-
-document.addEventListener("readystatechange", function(){
-    let title = document.getElementsByTagName("title")[0].innerHTML;
-    let currentPage;
-    document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
-    if(title.includes("home")){
-        currentPage = "nav-home"
-        setWhiteBackground();
-    }else if(title.includes("about")){
-        currentPage = "nav-about"
-    }else if(title.includes("contact")){
-        currentPage = "nav-contact"
-    }else if(title.includes("resources")){
-        currentPage = "nav-resources"
-    }else if(title.includes("payroll")){
-        currentPage = "nav-payroll";
-    }else if(title.includes("services")){
-        currentPage = "nav-services";
-    }
-
-    if(title.includes("home")){
-        initialNavColor = "transparent";
-    }else{
-        initialNavColor = "rgba(0,0,0,0.7)"
-    }
-    document.getElementsByTagName('nav')[0].style.backgroundColor = initialNavColor;
-    document.getElementById(currentPage).className = "selected";
-})
 
 
-function setWhiteBackground(){
-    document.getElementsByTagName('body')[0].style.backgroundColor = "white";
-}
-
-let timer = null;
-
-let x = window.matchMedia("(max-width: 1024px)");/*min-width: 1024px*/
-
-function setNavbar(x){
-    mobileNavbar();
-}
+let x = window.matchMedia("(max-width: 1024px)");
 setNavbar(x);
 
 window.addEventListener('resize', function(e){
@@ -58,10 +18,10 @@ window.addEventListener('resize', function(e){
 });
 
 
-function desktopNavbar(){
-    let navbar = document.getElementsByTagName('nav')[0];/**/
-    navbar.style.backgroundColor="rgba(0,0,0,0.7)";
+function setNavbar(x){
+    mobileNavbar();
 }
+
 
 function mobileNavbar(){
     window.addEventListener('scroll', function(e){
@@ -70,7 +30,7 @@ function mobileNavbar(){
         if(window.scrollY >10){
             navbar.style.backgroundColor="rgba(0,0,0,0.7)";
         }else{
-            navbar.style.backgroundColor= initialNavColor;
+            navbar.style.backgroundColor= "transparent";
         }
         
     });
