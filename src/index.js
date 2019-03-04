@@ -1,7 +1,7 @@
 import './custom.css';
 
 window.onload = function(){
-    setInterval(function(){loadPage();}, 1000);
+    setInterval(function(){loadPage();}, 500);
 }
 function loadPage(){
     document.getElementsByTagName("body")[0].style.display = "block";
